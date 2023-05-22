@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu {
+    background-color: #07c546;
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+}
+
+#menu_burg{
+    width: 24px
+}
