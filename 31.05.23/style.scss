@@ -1,0 +1,90 @@
+* { margin: 0;
+    padding: 0;
+}
+
+//MEDIA QUERIS
+
+
+$dekstop:768px;
+
+@mixin dekstop{
+    @media(min-width:$dekstop){@content;}
+}
+
+
+//font import 
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;700&display=swap');
+
+
+// VARIABILI COLORE
+
+$primary-color:#2D2C2C;
+$secondary-color:#FF00F7;
+$color_white:#F8F1F1;
+
+// VARIABILI FONT 
+
+$titolo: 'Jura', sans-serif;
+// $testo:
+
+//MIXIN
+
+@mixin flex ($flex-direction , $justify-content) {
+    display: flex;
+    flex-direction:$flex-direction;
+    justify-content:$justify-content;
+    align-items: center;
+   
+}
+
+body{
+    
+    nav{
+        background: $primary-color ;
+        width: 100%;
+        @include flex (row ,space-around );
+
+        h3{
+            color:#F8F1F1;
+            font-family:$titolo;
+            border-radius: 1rem solid $secondary-color ;
+        }
+        // div{
+        //     @include flex (row , start);
+        //     border-bottom-left-radius: 1rem ;
+        //     border: 0.2 solid $secondary-color;
+
+        // }
+
+        img.menu{
+            width:2rem;
+            padding:0.5rem;
+        }
+            
+    
+        ul{
+            // @include flex (row , end);
+            gap:4rem;
+            width:50%;
+            display:none;
+            
+           
+            li{
+                
+              a{
+                text-decoration: none;
+                list-style: none;
+                font-family: $titolo;
+                color: $color_white;
+
+               }
+            } 
+        
+        }  
+    }
+
+
+
+   
+}
